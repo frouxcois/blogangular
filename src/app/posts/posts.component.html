@@ -1,0 +1,12 @@
+<li class="list-group-item" [ngStyle]="{'color': getColor(), 'background-color': getBackground()}" >
+<h3><div style="text-align:left">
+  {{posttitle}}
+</div>
+  <div style = "text-align:right ">
+    {{postcreatedate | date: 'short'}}
+  </div>
+</h3>
+<p>{{postcontent}}</p>
+<button class="btn btn-success" (click)="onlove()">Love its</button>
+<button class="btn btn-danger" (click)="ondontlove()">Don't love!!</button>
+</li>
