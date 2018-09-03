@@ -9,36 +9,36 @@ export class PostsComponent implements OnInit {
     @Input() posttitle: string;
     @Input() postcontent: string;
     @Input() postcreatedate: Date;
-    @Input() postloveIts: number;
+    @Input() postloveIt: number;
 
   constructor() { }
 
   ngOnInit() {
   }
   onlove(){
-    this.postloveIts+=1;
+    this.postloveIt+=1;
   }
   ondontlove(){
-      this.postloveIts-=1;
+      this.postloveIt-=1;
   }
   getColor() {
-      if(this.postloveIts==0){
+      if(this.postloveIt==0){
         return 'black';
     }
-    else if(this.postloveIts>0) {
+    else if(this.postloveIt>0) {
       return 'green';
-    } else if(this.postloveIts<0) {
+    } else if(this.postloveIt<0) {
       return 'red';
     }
 
 }
     getBackground(){
-      if(this.postloveIts==0){
+      if(this.postloveIt==0){
         return 'white';
     }
-    else if(this.postloveIts>0) {
+    else if(this.postloveIt>0) {
       return '#A9F5E1';
-    } else if(this.postloveIts<0) {
+    } else if(this.postloveIt<0) {
       return '#FA8258';
     }
     }
